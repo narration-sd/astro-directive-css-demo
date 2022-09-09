@@ -1,6 +1,6 @@
 <template>
-  <div class="boxed">
-    <h2 class="marked-up">{{ msg }}</h2>
+  <div class="dark:bg-gray-500 bg-gray-500 dark:text-amber-200 text-amber-200 p-4 mx-32 my-4 rounded">
+   <h2>{{ msg }}</h2>
   </div>
 </template>
 
@@ -15,15 +15,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.boxed {
-  max-width: 200px;
-  margin: 20px auto;
-  padding: 10px 50px;
-  background-color: darkgray;
-}
-.marked-up {
-  color: gold;
-}
-</style>
