@@ -17,13 +17,5 @@ export default {
 </script>
 
 <style>
-.boxed {
-  max-width: 200px;
-  margin: 20px auto;
-  padding: 10px 50px;
-  background-color: darkgray;
-}
-.marked-up {
-  color: gold;
-}
+  @import './sans-hydrate.css';
 </style>
