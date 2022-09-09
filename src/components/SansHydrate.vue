@@ -1,22 +1,24 @@
 <template>
-  <div class="boxed">
-    <h2 class="marked-up">{{ msg }}</h2>
+  <div :class="styles.boxed">
+    <h2 :class="styles.marked">{{ msg }}</h2>
   </div>
 </template>
 
-<script setup>
-import { useCssModule } from 'vue'
-</script>
-
 <script>
+import { useCssModule } from 'vue'
+
 export default {
   name: 'SansHydrate',
   props: {
     msg: { type: String, default: 'I\'m Sans Hydrate' },
   },
   setup (props) {
-    useCssModule('classes')
+    const styles = useCssModule('classes')
+    console.log('styles: ' + JSON.stringify(styles))
     console.log('props: ' + JSON.stringify(props))
+    return {
+      styles
+    }
   }
 }
 </script>
@@ -28,7 +30,7 @@ export default {
   padding: 10px 50px;
   background-color: darkgray;
 }
-.marked-up {
+.marked {
   color: gold;
 }
 </style>
