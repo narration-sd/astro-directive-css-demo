@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import SansHydrate from '../components/SansHydrate.vue'
+import GreenIfGood from '../components/GreenIfGood.vue'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -13,7 +14,9 @@ import SansHydrate from '../components/SansHydrate.vue'
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
 
-		<SansHydrate msg="Sans Hydrate, Sans CSS??" />
+        <SansHydrate msg="Sans Hydrate, Sans CSS??" />
+
+        <GreenIfGood msg="Green means good..." client:load />
 
 		<ul role="list" class="link-card-grid">
 			<Card
